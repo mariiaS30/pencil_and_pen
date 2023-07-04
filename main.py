@@ -2,23 +2,29 @@ class Pencil:
     def __init__(self, color):
         self.color = color
     
-    def draw(self, color):
-        print(f'Нарисован рисунок цветом {color}')
+    def draw(self):
+        print(f'Нарисован рисунок цветом {self.color}')
     
 class Pen(Pencil):
     def __init__(self, color):
         super().__init__(color)
     
-    def draw(self, color):
-        super().draw(color)
+    def draw(self):
+        super().draw()
     
-    def sign(self, color):
-        if self.color == 'красный':
-            print(f'Ручкой цвета {color} нельзя подписать документ')
-        elif self.color == 'синий' or self.color == 'чёрный' or self.color == 'фиолетовый':
+    def sign(self):
+        if self.color == 'синий' or self.color == 'чёрный' or self.color == 'фиолетовый':
             print(f'Подписан документ')
+        else:
+            print(f'Ручкой цвета {self.color} нельзя подписать документ')
+
 
 BluePen = Pen('синий')
-BluePen.sign('фиолтовый')
-
-
+BluePen.sign()
+RedPen = Pen('красный')
+RedPen.sign()
+PinkPen = Pen('розовый')
+PinkPen.sign()
+PinkPen.draw()
+BlackPencil = Pencil('черный')
+BlackPencil.draw()
