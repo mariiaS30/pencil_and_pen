@@ -14,7 +14,7 @@ class Pen(Pencil):
         super().draw()
     
     def sign(self):
-        if self.color == 'синий' or self.color == 'чёрный' or self.color == 'фиолетовый' and self.pen_type != 'гелевая':
+        if (self.color == 'синий' or self.color == 'чёрный' or self.color == 'фиолетовый') and self.pen_type != 'гелевая':
             print(f'Подписан документ')
         elif self.pen_type == 'гелевая':
             print(f'Ручкой типа {self.pen_type} нельзя подпиать')
@@ -22,14 +22,14 @@ class Pen(Pencil):
             print(f'Ручкой цвета {self.color} нельзя подписать документ')
 
 
-RedPen = Pen('красный', 'гелевая')
-RedPen.sign()
-PinkPen = Pen('розовый', 'шариковая')
-PinkPen.sign()
-PinkPen.draw()
-BlackPencil = Pencil('черный')
-BlackPencil.draw()
-BluePencil = Pencil('синий')
-BluePencil.draw()
-BluePen = Pen('синий', 'шариковая')
+# RedPen = Pen('красный', 'гелевая')
+# RedPen.sign()
+# PinkPen = Pen('розовый', 'шариковая')
+# PinkPen.sign()
+# PinkPen.draw()
+# BlackPencil = Pencil('черный')
+# BlackPencil.draw()
+# BluePencil = Pencil('синий')
+# BluePencil.draw()
+BluePen = Pen('синий', 'гелевая')
 BluePen.sign()
